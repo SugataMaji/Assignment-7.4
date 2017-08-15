@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{name}} {{lastname}}!!
+  </h1>
+<input type="text" [(ngModel)]='name'>
+<input type="text"  [(ngModel)]='lastname'>
+   <input type="button" (click)="onbtnclick()"  [title]="title" [value]="title">
+
+   <table [ngStyle]="{'color':(even?'red':'green')}">
+    <tr>
+      <td>Name</td>
+      <td>Price</td>
+    </tr>
+    <tr *ngFor="let p of product">
+      <td >{{p.title}}</td>
+      <td>{{p.price}}</td>
+    </tr>
+   </table>
